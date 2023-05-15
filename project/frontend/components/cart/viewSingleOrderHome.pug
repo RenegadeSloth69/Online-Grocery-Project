@@ -1,0 +1,35 @@
+div.container
+    h1.order-info Order Information
+    div.info
+      div.row
+        div.col
+          span.label Name of User:
+          span.value= order.name
+        div.col
+          span.label Order Id:
+          span.value= order._id
+      div.row
+        div.col
+          span.label Order Status:
+          span.value= order.status
+        div.col
+          span.label Order Created At:
+          span.value= new Date(order.createdAt).toLocaleDateString()
+      if(order.deliveredAt)
+        div.row
+          div.col
+            span.label Order Delivered At:
+            span.value= new Date(order.deliveredAt).toLocaleDateString()
+      div.row
+        div.col
+          span.label Order Total:
+          span.value= order.absTotal
+      if(order.status==="Delivered")
+        div.row
+          div.col
+            a.btn.btn-primary(href="/api/v1/admin/orders") Go Back
+      else 
+        div.row
+          div.col
+            form(action=`/api/v1/admin/order/${order._id}/update`, method="POST") 
+              button.btn.btn-primary(type="submit") Update Status

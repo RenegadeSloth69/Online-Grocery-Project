@@ -1,0 +1,39 @@
+h1(style="text-align:center;") Your Cart
+if cart.length === 0
+  p Your cart is empty
+else
+  .cart-container
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th(scope="col") Product
+          th(scope="col") Quantity
+          th(scope="col") Price
+          th(scope="col") Total
+          th(scope="col")
+
+      tbody
+        each item in cart
+          tr
+            td.product-name= item.product.name
+            td.product-quantity
+              form(method="post" action=`/api/v1/cart/${item._id}?_method=PUT`)
+                input(type="hidden" name="_csrf" value=csrfToken)
+                input.form-control(type="number" min="1" name="quantity" value=item.quantity)
+                button.btn.btn-primary(type="submit") Update
+            td.product-price= item.product.price
+            td.product-total= item.product.price * item.quantity
+            td.product-remove
+              form(method="post" action=`/api/v1/cart/${item._id}?_method=DELETE`)
+                input(type="hidden" name="_csrf" value=csrfToken)
+                button.btn.btn-danger(type="submit") Remove
+
+      tfoot
+        tr
+          td(colspan="3" style="text-align: right") Total:
+          td.product-total= absTotal
+        tr
+          td(colspan="5")
+            form(action="/api/v1/order" method="GET")
+              button.btn.btn-success(type="submit") Checkout
+

@@ -1,0 +1,15 @@
+form.form-container(method='POST' action='/api/v1/recipe/new')
+  .form-header
+    h1.form-title Create New Recipe
+  .form-group
+    label.form-label(for='title') Title
+    input.form-input#title(type='text' name='title' placeholder='Enter recipe title')
+  .form-group
+    label.form-label(for='ingredients') Ingredients
+    textarea.form-textarea#ingredients(name='ingredients' placeholder='Enter ingredients, separated by commas')
+  .form-group
+    label.form-label(for='instructions') Instructions
+    textarea.form-textarea#instructions(name='instructions' placeholder='Enter instructions')
+  .form-group
+    button.form-button(type='submit') Save
+

@@ -1,0 +1,13 @@
+.product-card-container
+  if (products.length > 0)
+    each product in products
+      .card
+        img.card-img-top(src="https://images.pexels.com/photos/14798519/pexels-photo-14798519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=product.name)
+        .card-body
+          h5.card-title
+            a(href=`/api/v1/product/${product._id}`)= product.name
+        .card-footer
+          .card-buttons
+            a.btn.btn-primary.btn-cart(href=`/api/v1/admin/product/${product._id}`) Update Product
+            form(action=`/api/v1/admin/product/${product._id}/delete`, method="POST")
+                button(type="submit") Delete Product

@@ -1,0 +1,18 @@
+h1 Order List
+    each order in orders
+        table
+            thead
+                tr
+                th Name
+                th Order ID
+                th Status
+                th Date
+            tbody
+                tr
+                    td= order.name
+                    td= order._id
+                    td= order.status
+                    td= new Date(order.createdAt).toLocaleDateString()
+                    td 
+                        form(action=`/api/v1/admin/order/${order._id}`, method="GET") 
+                            input(type="submit", value="View Order")

@@ -1,0 +1,67 @@
+doctype html
+html
+  head
+    title My Website
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css")
+    style 
+      include ../components/layout/Overlay/overlay.css
+      include ../components/cart/cartHome.css
+      link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css", integrity="sha384-Pv5G5jKd5HAZz+xKBW8hFttk7inuKjIyH7cudovYvMg+HHfBmHbZBDKjBE1GtX9J", crossorigin="anonymous")
+      style.
+        .table td {
+          vertical-align: middle;
+        }
+        .table th,
+        .table td {
+          border-top: none;
+        }
+        .table .btn {
+          padding: 0.5rem 0.75rem;
+        }
+        .table .btn-primary {
+          background-color: #007bff;
+          border-color: #007bff;
+        }
+        .table .btn-primary:hover {
+          background-color: #0069d9;
+          border-color: #0062cc;
+        }
+        .table .btn-danger {
+          background-color: #dc3545;
+          border-color: #dc3545;
+        }
+        .table .btn-danger:hover {
+          background-color: #c82333;
+          border-color: #bd2130;
+        }
+        .checkout-button {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: flex-end;
+        }
+        .checkout-button button {
+          margin-left: 1rem;
+        }
+        .checkout-container {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 1rem;
+        }
+
+        .checkout-container button {
+          font-size: 1.2rem;
+          padding: 0.75rem 1.5rem;
+          border-radius: 4px;
+          background-color: #28a745;
+          border-color: #28a745;
+          color: #fff;
+        }
+
+        .checkout-container button:hover {
+          background-color: #218838;
+          border-color: #1e7e34;
+        }
+
+  body
+    include ../components/layout/Overlay/overlay.pug
+    include ../components/cart/cartHome.pug

@@ -1,0 +1,87 @@
+.profileMHeading {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #555;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #777;
+  }
+  
+  .history {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #777;
+  }
+  
+  .approach {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #777;
+  }
+  
+  .products {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #777;
+  }
+  
+  .sustainability {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #777;
+  }
+  
+  p {
+    margin-top: 0;
+  }
+  
+  a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .title {
+      font-size: 2.5rem;
+    }
+    
+    .description,
+    .history,
+    .approach,
+    .products,
+    .sustainability {
+      font-size: 1rem;
+    }
+  }

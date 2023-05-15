@@ -1,0 +1,28 @@
+// Add a class to the h1 tag
+h1(class="heading") Recipes
+
+div.formDiv
+  // Style the buttons
+  form(action="/api/v1/recipes/me", method="GET")
+    input.btn(type="submit", value="My Recipes")
+
+  form(action="/api/v1/recipe/new", method="GET")
+    input.btn(type="submit", value="Add Recipe")
+
+if recipes.length > 0
+  each recipe, index in recipes
+    table.table
+      thead
+        tr
+          th Author
+          th Title
+          th Date
+      tbody
+        td= recipe.author.name
+        td= recipe.title
+        td= new Date(recipe.date).toLocaleDateString()
+        td
+          form(action=`/api/v1/recipe/${recipe._id}`, method="GET")
+            input.btn(type="submit", value="View Recipe")
+else
+  p There are no recipes currently.

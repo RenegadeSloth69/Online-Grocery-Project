@@ -1,0 +1,21 @@
+.wrapper
+  form(action="/api/v1/login", method="POST", id="form")
+    h1 Login
+    .field.email
+      .input-area
+        input(type="text", placeholder="Email Address", class="email", name="email", required)
+        i.icon.fas.fa-envelope
+        i.error.error-icon.fas.fa-exclamation-circle
+      .error.error-txt Email can't be blank
+    .field.password
+      .input-area
+        input(type="password", placeholder="Password", class="password", name="password", required)
+        i.icon.fas.fa-lock
+        i.error.error-icon.fas.fa-exclamation-circle
+      .error.error-txt Password can't be blank
+    .pass-txt
+      a(href="/api/v1/password/forgot") Forgot password?
+    input(type="submit", value="Login")
+  .sign-txt Not yet member? 
+    a(href="/api/v1/register") Signup now
+

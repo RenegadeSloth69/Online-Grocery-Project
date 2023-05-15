@@ -1,0 +1,12 @@
+h1.profileMHeading User Profile
+
+main
+  .user-profile
+    h2.name= user.name
+    h2.email= user.email
+    div.role-container
+      h2 Role:
+      h2.role= user.role
+    .links-container
+      a.profile-link(href="/api/v1/me/update") Update Profile
+      a.profile-link(href="/api/v1/password/update") Update Password

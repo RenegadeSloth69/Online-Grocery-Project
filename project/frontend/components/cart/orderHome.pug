@@ -1,0 +1,65 @@
+div.container
+  h1 Order
+
+  table.product-table
+    thead
+      tr
+        th Product
+        th Quantity
+        th Price
+        th Total
+
+    tbody
+      each item in cart
+        tr
+          td= item.product.name
+          td= item.quantity
+          td= item.product.price
+          td= item.product.price * item.quantity
+
+    tfoot
+      tr
+        td(colspan="3") Total:
+        td= absTotal
+
+  form.form(method="POST" action="/api/v1/order")
+    div.form-group
+      label(for="name") Name:
+      input(type="text" id="name" name="name" required)
+      input(type="hidden" id="absTotal" name="absTotal" value=absTotal)
+
+    div.form-group
+      label(for="address1") Address Line 1:
+      input(type="text" id="address1" name="address1" required)
+
+    div.form-group
+      label(for="address2") Address Line 2:
+      input(type="text" id="address2" name="address2")
+
+    div.form-group
+      label(for="city") City:
+      input(type="text" id="city" name="city" required)
+
+    div.form-group
+      label(for="state") State:
+      input(type="text" id="state" name="state" required)
+
+    div.form-group
+      label(for="zipcode") Zipcode:
+      input(type="text" id="zipcode" name="zipcode" required)
+
+    div.form-group
+      label(for="card_number") Card Number:
+      input(type="text" id="card_number" name="card_number" required)
+
+    div.form-group
+      label(for="card_expiry") Card Expiry (MM/YY):
+      input(type="text" id="card_expiry" name="card_expiry" required)
+
+    div.form-group
+      label(for="card_cvc") CVV:
+      input(type="text" id="card_cvc" name="card_cvc" required)
+
+    div.buttons
+      button(type="submit") Place Order
+      a.btn.btn-secondary(href="/cart") Cancel

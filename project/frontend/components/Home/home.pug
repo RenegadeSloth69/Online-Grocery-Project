@@ -1,0 +1,15 @@
+.banner
+  h1(style="opacity:1;") Welcome to Marike's 
+  p(style="opacity:1;") Check out our amazing content below!
+  button.scroll-button(type='button') Scroll Down
+h2.featured-products Featured Products
+#container 
+  include ../ProductCard/productCard.pug
+
+script.  
+  const button = document.querySelector('.scroll-button');
+  const container = document.querySelector('#container');
+
+  button.addEventListener('click', () => {
+    container.scrollIntoView({ behavior: 'smooth' });
+  });

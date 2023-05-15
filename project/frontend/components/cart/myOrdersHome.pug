@@ -1,0 +1,18 @@
+h1 Your Orders
+if orders.length > 0
+  each order, index in orders
+    table
+      thead
+        tr
+          th Products
+          th Amount
+          th Status
+          th Date
+      tbody
+        each product, pIndex in products[index]
+          td(style="display:flex;")= product
+        td= order.absTotal
+        td= order.status
+        td= new Date(order.createdAt).toLocaleDateString()
+else
+  p You have no orders yet.

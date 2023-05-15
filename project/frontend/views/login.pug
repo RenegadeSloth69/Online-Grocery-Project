@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title My Website
+    style 
+      include ../components/layout/Overlay/overlay.css
+      include ../components/login-signup/loginHome.css
+      include ../components/layout/Footer/Footer.css
+
+  body
+    div.cont
+      h1.message= message
+      include ../components/layout/Overlay/loginOverlay.pug
+      include ../components/login-signup/loginHome.pug

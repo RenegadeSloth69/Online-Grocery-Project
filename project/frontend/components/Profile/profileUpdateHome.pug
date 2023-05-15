@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Update Profile
+  body
+    h1 Update Profile
+    form(action="/api/v1/me/update", method="POST")
+      label(for="name") Name:
+      input(type="text", id="name", name="name", required)
+      label(for="email") Email:
+      input(type="email", id="email", name="email", required)
+      button(type="submit") Update

@@ -1,0 +1,44 @@
+.banner {
+    height: 100vh;
+    background: url('https://cdn.pixabay.com/photo/2018/04/28/14/12/food-3357374_1280.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner h1 {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .banner p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: white
+  }
+  
+  .scroll-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-button:hover {
+    background-color: #555;
+  }
+
+  .featured-products {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+  }
+  

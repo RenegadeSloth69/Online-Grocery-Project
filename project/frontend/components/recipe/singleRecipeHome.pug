@@ -1,0 +1,8 @@
+section.recipe
+  h1= recipe.title
+  p.author Author: #{recipe.author.name} | Date: #{new Date(recipe.date).toLocaleDateString()}
+  .recipe-content
+    h3 Ingredients:
+    div.content!= ingredientHtml
+    h3 Instructions:
+    div.content!= instructionHtml

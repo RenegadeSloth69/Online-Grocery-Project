@@ -1,0 +1,13 @@
+main.main-container
+      h1.profileMHeading User Profile
+      h2.name= user.name
+      h2.Email= user.email
+      div.Role
+        h2 Role: 
+        h2.role= user.role
+      form(action=`/api/v1/admin/users/${req.params.id}`, method="POST")
+        label(for="role") Update Role: 
+        select(name="role")
+          option(value="user") User 
+          option(value="admin") Admin   
+        button(type="submit") Change role

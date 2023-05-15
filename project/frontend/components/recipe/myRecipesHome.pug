@@ -1,0 +1,26 @@
+section.recipes
+  h1 My Recipes
+  div.formDiv
+    form(action="/api/v1/recipes", method="GET") 
+      input(type="submit", value="All Recipes")
+    form(action="/api/v1/recipe/new", method="GET") 
+      input(type="submit", value="Add Recipe")
+  if recipes.length > 0
+    each recipe, index in recipes
+      table
+        thead
+          tr
+            th Title
+            th Date
+        tbody
+          td= recipe.title
+          td= new Date(recipe.date).toLocaleDateString()
+          td 
+            form(action=`/api/v1/recipe/${recipe._id}`, method="GET") 
+              input(type="submit", value="View Recipe")
+          td 
+            form(action=`/api/v1/recipes/me/${recipe._id}`, method="POST") 
+              input(type="submit", value="Delete Recipe" style="background:red;")
+            
+  else
+    p You haven't created any recipes yet.

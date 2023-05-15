@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  table {
+    border: 2px solid black;
+    margin: 0 auto 2rem;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 1.2rem;
+  }
+  th {
+    background-color: #2d4059;
+    color: white;
+  }
+  td button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  td button:hover {
+    background-color: #0062cc;
+  }

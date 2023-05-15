@@ -1,0 +1,40 @@
+header
+  nav
+    button.menu-button
+      box-icon(name='menu')
+  .overlay
+    ul
+      li
+        h1 Marike's Online Grocery
+      li
+        a(href='/') Home
+      li
+        a(href='/api/v1/products') Products
+      li
+        a(href='#contact') Recipe
+      li
+        a(href='#about') About Us
+      li 
+        a(href='/api/v1/login') Login   
+      
+script.
+  // JavaScript for the navbar
+  const menuButton = document.querySelector(".menu-button");
+  const overlay = document.querySelector(".overlay");
+
+  menuButton.addEventListener("click", () => {
+    overlay.classList.toggle("open");
+  });
+
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      overlay.classList.remove("open");
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      overlay.classList.remove("open");
+    }
+  });
+script(src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js")

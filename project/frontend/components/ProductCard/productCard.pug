@@ -1,0 +1,34 @@
+.product-card-container
+  if (products.length > 0)
+    each product in products
+      .card
+        img.card-img-top(src=`/${product.image.url}` alt=product.name, style="justify-content: center;")
+        .card-body
+          h5.card-title
+            a(href=`/api/v1/product/${product._id}`)= product.name
+          p.card-text= product.description
+        .card-footer
+          span.price= `Rs. ${product.price.toFixed(2)}`
+          .card-buttons
+            form(method="POST" action="/api/v1/add-to-cart")
+              input(type="hidden" name="productId" value=product._id.toString())
+              button(type="submit" style="background-color: #A68F7B") Add to Cart
+            a.btn.btn-secondary.btn-wishlist(href=`/wishlist/add/${product._id}`) Add to Wishlist
+          //- form
+            //- label(for='rating') Rate this product:
+            //- .rating
+            //-   input(type='radio', name='rating', id='star5', value='5')
+            //-   label(for='star5') 
+            //-     i.fa.fa-star
+            //-   input(type='radio', name='rating', id='star4', value='4')
+            //-   label(for='star4') 
+            //-     i.fa.fa-star
+            //-   input(type='radio', name='rating', id='star3', value='3')
+            //-   label(for='star3') 
+            //-     i.fa.fa-star
+            //-   input(type='radio', name='rating', id='star2', value='2')
+            //-   label(for='star2') 
+            //-     i.fa.fa-star
+            //-   input(type='radio', name='rating', id='star1', value='1')
+            //-   label(for='star1') 
+            //-     i.fa.fa-star

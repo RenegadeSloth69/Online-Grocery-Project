@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title My Website
+    link(href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css", rel="stylesheet")
+    style 
+      include ../components/layout/Overlay/overlay.css
+      include ../components/login-signup/signupHome.css
+      include ../components/layout/Footer/Footer.css
+
+  body
+    div(style="width:70%;")
+      h1.message= message
+      include ../components/layout/Overlay/overlay.pug
+      include ../components/login-signup/signupHome.pug

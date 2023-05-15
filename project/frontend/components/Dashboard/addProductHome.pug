@@ -1,0 +1,27 @@
+form.productForm(action="/api/v1/admin/product/new", method="POST", enctype="multipart/form-data")
+    label(for="name") Name:
+    input(type="text", name="name", required)
+
+    label(for="price") Price:
+    input(type="number", name="price", required)
+
+    label(for="Stock") Stock: 
+    input(type="number", name="Stock", required)
+
+    label(for="description") Description:
+    textarea(name="description", required)
+
+    label(for="category") Category:
+    select(name="category", required)
+      option(value="groceries") Groceries
+      option(value="gou") Gou Products
+      option(value="soaps") Soaps
+      option(value="squashes") Squashes
+      option(value="homeProducts") Home Products
+      option(value="oils") Oils
+      option(value="sweets") Sweets and Namkeens
+    
+    label(for="image") Image:
+    input(type="file", name="image")
+
+    button(type="submit") Add Product

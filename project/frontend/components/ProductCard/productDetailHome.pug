@@ -1,0 +1,34 @@
+h1.profileMHeading Product Description
+
+main
+  img(src=`/${product.image.url}`, alt="User Avatar")
+  
+  // Product Name and Price
+  h2.name= product.name
+  h2.Email= product.price
+  
+  // Product Description
+  div(description)
+    h2 Description: 
+    h2.description= product.description
+
+  // Review Form
+  form(action=`/api/v1/product/${product._id}/reviews`, method='POST')
+    label(for='rating') Rating
+    input(type='number', name='rating', min='1', max='5', required=true)
+    label(for='comment') Comment
+    textarea(name='comment', required=true)
+    button(type='submit') Submit Review
+
+  // Reviews Section
+  div.reviews
+    h2 Reviews
+
+    // Review Table
+    for review in reviews 
+      table.review-table
+        tr 
+          th Author: #{review.name}
+          th Rating: #{review.rating} 
+        tr  
+          td= review.comment

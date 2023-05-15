@@ -1,0 +1,12 @@
+.user-card-container
+  if (users.length > 0)
+    each user in users
+      .card
+        .card-body
+          h5.card-title= user.name
+        .card-footer
+          .card-buttons
+            form(action=`/api/v1/admin/users/${user._id}`, method="GET") 
+                button(type="submit") View User
+            form(action=`/api/v1/admin/users/${user._id}/delete`, method="POST")
+                button(type="submit") Delete User

@@ -1,0 +1,93 @@
+.cart-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+th {
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+td {
+  padding: 10px;
+}
+
+.product-name {
+  width: 40%;
+}
+
+.product-quantity input {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.product-price,
+.product-total {
+  text-align: right;
+}
+
+.product-remove button {
+  padding: 5px 10px;
+}
+
+tfoot td {
+  font-weight: bold;
+  text-align: right;
+}
+
+tfoot .product-total {
+  font-size: 18px;
+}
+
+.btn {
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
